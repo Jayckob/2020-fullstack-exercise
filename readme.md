@@ -49,3 +49,20 @@ The customer table must not be viewable unless the user is authenticated.
 ## Questions?
 
 If you have any questions around the implementation of this exercise, please open an Issue on the parent repository at https://github.com/uniti-wireless
+
+=============================================================================================================================
+
+### Assumptions Made:
+- Paging is to be 5 items per page to show how 3 pages handle 12 items
+- Tag filters are intersecting, not a union
+- Applying filters should take the user back to the first page
+  
+### Basics:
+The Implementation is a small, lightweight ASP.NET MVC C# application sporting a single page React Front end.
+The home page is a minimal login screen, once authenticated with JWT, the user is taken to the Customers screen with a personalised greeting. The page supports filtering on the customers for both tags and number of employees, they work together to provide an intersected result showing customers who meet all criteria.
+The user can also log out where they will be presented with the login screen.
+  
+### Todo:
+- Beautify the front end with the clients colourscheme and logo.
+- Implement unit testing on Login authentication and Customer page filters using stubbed YamlParser.
+- Refractor React frontend into one file per component.
